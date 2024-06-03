@@ -1,6 +1,11 @@
+import sys
+import os
+
+# Add the parent directory to the sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'ux')))
+
 import asyncio
 from typing import Optional
-
 from trulens_eval.schema import app as mod_app_schema
 from trulens_eval.schema import record as mod_record_schema
 from trulens_eval.tru import Tru
@@ -9,6 +14,8 @@ from trulens_eval.utils.serial import JSON
 from trulens_eval.utils.serial import Lens
 from trulens_eval.utils.streamlit import init_from_args
 from trulens_eval.ux.apps import ChatRecord
+
+
 
 # https://github.com/jerryjliu/llama_index/issues/7244:
 asyncio.set_event_loop(asyncio.new_event_loop())

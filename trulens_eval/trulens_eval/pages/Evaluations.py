@@ -20,7 +20,6 @@ import streamlit as st
 from streamlit_pills import pills
 from ux.page_config import set_page_config
 from ux.styles import CATEGORY
-
 from trulens_eval import Tru
 from trulens_eval.app import Agent
 from trulens_eval.app import ComponentView
